@@ -50,19 +50,22 @@
 
         function playGame () {
             playRound(getHumanChoice(), getComputerChoice());
-            if (computerScore >= 5) {
-                console.log('Computer won');
+            if (computerScore >= 2) {
+                console.log('You lost!');
                 return;
             }
-            else if (humanScore >= 5) {
-                console.log('You won!');
+            else if (humanScore >= 2) {
+                alert('You won!')
                 return;
             }
             else {
                 playGame();
             }
         }
-                     
+        
+        window.onload = function() {
+            playGame();
+        };   
 
     </script>
 </body>
