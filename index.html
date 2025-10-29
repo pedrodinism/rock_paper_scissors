@@ -4,69 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        function getComputerChoice () {
-            let i = Math.floor(Math.random() * 3) + 1;
-            if (i === 1) {
-                return 'rock';
-            }
-            else if (i === 2) {
-                return 'paper';
-            }
-            else if (i === 3) {
-                return 'scissors';
-            }          
-        }
+    <div class="scoreboard">
+        <div class="result">
+            <div>You</div>
+            <div id="playerResult">2</div>
+        </div>
+        <div class="result">
+            <div>Machine</div>
+            <div id="machineResult">2</div>
+        </div>
+    </div>
 
-        function getHumanChoice () {
-            let choice = prompt('What is your choice?')
-            return choice
-        }
-
-        var humanScore = 0;
-        var computerScore = 0;
-
-        function playRound(humanChoice, computerChoice) {
-            humanChoice = humanChoice.toLowerCase();
-            computerChoice = computerChoice.toLowerCase();
-
-            if (humanChoice === computerChoice) {
-                console.log('It\'s a draw!');
-                return;
-            }
-            else if ((humanChoice === 'rock' && computerChoice === 'scissors') ||
-                     (humanChoice === 'paper' && computerChoice === 'rock') ||
-                     (humanChoice === 'scissors' && computerChoice === 'paper')) {
-                        console.log('You won! ' + humanChoice + ' beats ' + computerChoice + ' !');
-                        humanScore++;
-                     }
-            else {
-                    console.log('You lost! ' + computerChoice + ' beats ' + humanChoice + ' !');
-                    computerScore++;
-            }
-        }
-
-        function playGame () {
-            playRound(getHumanChoice(), getComputerChoice());
-            if (computerScore >= 2) {
-                alert('You lost!');
-                return;
-            }
-            else if (humanScore >= 2) {
-                alert('You won!')
-                return;
-            }
-            else {
-                playGame();
-            }
-        }
-        
-        window.onload = function() {
-            playGame();
-        };   
-
-    </script>
+    <div class="buttons">
+        <button>Rock</button>
+        <button>Paper</button>
+        <button>Scissors</button>
+    </div>
+    
 </body>
 </html>
