@@ -1,3 +1,8 @@
+.scoreboard {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .result {
     height: 10vh;
     width: 200px;
@@ -6,4 +11,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+button {
+    background: cornflowerblue;
+    width: 100px;
+    height: 40px;
+    color: white;
+    border: none;
 }

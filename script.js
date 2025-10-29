@@ -1,3 +1,14 @@
+/* variables */
+
+let humanScore = 0;
+let computerScore = 0;
+
+let humanDiv = document.querySelector('#playerResult')
+let machineDiv = document.querySelector('#machineResult')
+
+let buttons = document.querySelector('.buttons')
+
+/* Functions */
 
 function getComputerChoice () {
     let i = Math.floor(Math.random() * 3) + 1;
@@ -16,9 +27,6 @@ function getHumanChoice () {
     let choice = prompt('What is your choice?')
     return choice
 }
-
-var humanScore = 0;
-var computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
@@ -39,3 +47,16 @@ function playRound(humanChoice, computerChoice) {
             computerScore++;
     }
 }
+
+/* On load */
+
+window.onload = function () {
+    humanDiv.textContent = humanScore
+    machineDiv.textContent = computerScore
+}
+
+/* listener */
+
+buttons.addEventListener('click', (event) => {
+    let target = event.target
+})
