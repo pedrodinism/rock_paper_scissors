@@ -1,22 +1,29 @@
-.scoreboard {
+.scoreboard,
+.results {
     display: flex;
     justify-content: space-evenly;
 }
 
-.result {
+.score,
+.results div {
     height: 10vh;
-    width: 200px;
-    border: 1px solid black;
+    width: 200px;    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.score {
+    /* border: 1px solid black; */
+    font-size: 32px;
+}
+
 .buttons {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 80px;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 1em;
 }
 
 button {
@@ -25,4 +32,17 @@ button {
     height: 40px;
     color: white;
     border: none;
+}
+
+.results {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.finalResult {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
 }
